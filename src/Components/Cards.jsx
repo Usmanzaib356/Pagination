@@ -108,7 +108,7 @@ function Cards() {
                 pageClassName='px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-blue-700 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400  dark:hover:text-white'
                 nextClassName='px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-blue-700 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
                 previousClassName='px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-blue-700 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
-                activeClassName='bg-blue-900 text-white'
+                // activeClassName='bg-blue-900 text-white'
             />
             </div>
 
