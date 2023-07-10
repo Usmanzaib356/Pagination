@@ -11,6 +11,9 @@ function Cards() {
     const perPage = 9
 
 
+    
+    
+
     //   axois
     useEffect(() => {
 
@@ -31,6 +34,26 @@ function Cards() {
     setPageCount(Math.ceil(data.length / perPage))
   },[startIndex,perPage,data])
 
+
+
+
+  useEffect(() => {
+    const storedIndex = localStorage.getItem('startIndex')
+    if (storedIndex) {
+      setStartIndex(parseInt(storedIndex))
+    }
+  }, [])
+
+  // Update local storage when the page changes
+  useEffect(() => {
+    localStorage.setItem('startIndex', startIndex)
+  }, [startIndex])
+
+
+
+
+
+  
 
 //   function 
  function handlePage (item){
@@ -56,8 +79,8 @@ function Cards() {
                     {currentItem.map((item,index)=>{
                          return(
                             <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800  dark:border-gray-700 w-72 h-50 text-start" >
-                        <a href="#" >
-                            <img className=" rounded-t-lg" src={img} alt="product image" />
+                        <a href="#" className='flex justify-center'>
+                            <img className=" rounded-t-lg" src={item.image.large} alt="product image" />
                         </a>
                         <div className='px-5 pb-5 pt-2'>
                             <h1 className='text-xl font-semibold tracking-tight text-gray-900 dark:text-white' >  {item.name}</h1>
